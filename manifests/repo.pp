@@ -46,6 +46,7 @@ class logstashforwarder::repo {
         include    => {
           'src' => false,
         }
+      }
     }
     'RedHat', 'Linux': {
       yumrepo { 'logstashforwarder':
