@@ -46,7 +46,8 @@ class logstashforwarder::repo {
         include    => {
           'src' => false,
         }
-      }
+      } ~> Exec[apt_update]
+      
     }
     'RedHat', 'Linux': {
       yumrepo { 'logstashforwarder':
