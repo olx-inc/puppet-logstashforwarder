@@ -149,6 +149,7 @@ class logstashforwarder::package {
         ensure   => $package_ensure,
         source   => $pkg_source,
         provider => $pkg_provider
+        require  => Exec['apt_update'],
       }
 
     }
